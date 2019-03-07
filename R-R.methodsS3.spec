@@ -4,7 +4,7 @@
 #
 Name     : R-R.methodsS3
 Version  : 1.7.1
-Release  : 13
+Release  : 14
 URL      : https://cran.r-project.org/src/contrib/R.methodsS3_1.7.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/R.methodsS3_1.7.1.tar.gz
 Summary  : S3 Methods Simplified
