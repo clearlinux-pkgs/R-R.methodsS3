@@ -4,13 +4,13 @@
 #
 Name     : R-R.methodsS3
 Version  : 1.7.1
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/R.methodsS3_1.7.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/R.methodsS3_1.7.1.tar.gz
 Summary  : S3 Methods Simplified
 Group    : Development/Tools
 License  : LGPL-2.1
-BuildRequires : clr-R-helpers
+BuildRequires : buildreq-R
 
 %description
 No detailed description available
@@ -23,11 +23,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521238996
+export SOURCE_DATE_EPOCH=1552785905
 
 %install
+export SOURCE_DATE_EPOCH=1552785905
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521238996
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -62,8 +62,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library R.methodsS3|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  R.methodsS3 || :
 
 
 %files
@@ -89,3 +88,12 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/R.methodsS3/help/paths.rds
 /usr/lib64/R/library/R.methodsS3/html/00Index.html
 /usr/lib64/R/library/R.methodsS3/html/R.css
+/usr/lib64/R/library/R.methodsS3/tests/appendVarArgs.R
+/usr/lib64/R/library/R.methodsS3/tests/attributes.R
+/usr/lib64/R/library/R.methodsS3/tests/findDispatchMethodsS3.R
+/usr/lib64/R/library/R.methodsS3/tests/getDispatchMethodS3.R
+/usr/lib64/R/library/R.methodsS3/tests/isGenericS3S4.R
+/usr/lib64/R/library/R.methodsS3/tests/pkgStartupMessage.R
+/usr/lib64/R/library/R.methodsS3/tests/setGenericS3.R
+/usr/lib64/R/library/R.methodsS3/tests/setMethodS3.R
+/usr/lib64/R/library/R.methodsS3/tests/throw.R
