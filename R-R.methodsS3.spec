@@ -4,7 +4,7 @@
 #
 Name     : R-R.methodsS3
 Version  : 1.8.2
-Release  : 54
+Release  : 55
 URL      : https://cran.r-project.org/src/contrib/R.methodsS3_1.8.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/R.methodsS3_1.8.2.tar.gz
 Summary  : S3 Methods Simplified
